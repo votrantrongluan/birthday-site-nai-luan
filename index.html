@@ -1,79 +1,60 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>Chúc mừng sinh nhật bé Nai</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chúc mừng sinh nhật bé Nai</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #fceabb, #f8b500);
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #d6336c;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .image-block {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+      margin-bottom: 30px;
+    }
+    .image-block.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .info {
+      font-size: 1.2em;
+      margin-top: 40px;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
+  <h1>🎉 Chúc mừng sinh nhật bé Nai 🎉</h1>
 
-        <div class="image-block">
-            <img src="images/image1.jpg" alt="Ảnh 1">
-            <p class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 1</p>
-        </div>
-    
-        <div class="image-block">
-            <img src="images/image2.jpg" alt="Ảnh 2">
-            <p class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 2</p>
-        </div>
-    
-        <div class="image-block">
-            <img src="images/image3.jpg" alt="Ảnh 3">
-            <p class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 3</p>
-        </div>
-    
-        <div class="image-block">
-            <img src="images/image4.jpg" alt="Ảnh 4">
-            <p class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 4</p>
-        </div>
-    
-        <div class="image-block">
-            <img src="images/image5.jpg" alt="Ảnh 5">
-            <p class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 5</p>
-        </div>
-    
-        <div class="image-block">
-            <img src="images/image6.jpg" alt="Ảnh 6">
-            <p class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 6</p>
-        </div>
-    
-        <div class="image-block">
-            <img src="images/image7.jpg" alt="Ảnh 7">
-            <p class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 7</p>
-        </div>
-    
-        <div class="image-block">
-            <img src="images/image8.jpg" alt="Ảnh 8">
-            <p class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 8</p>
-        </div>
-    
-        <div class="image-block">
-            <img src="images/image9.jpg" alt="Ảnh 9">
-            <p class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 9</p>
-        </div>
-    
-        <div class="image-block">
-            <img src="images/image10.jpg" alt="Ảnh 10">
-            <p class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 10</p>
-        </div>
-    
-        <div class="image-block">
-            <img src="images/image11.jpg" alt="Ảnh 11">
-            <p class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 11</p>
-        </div>
-    
-        <div class="image-block">
-            <img src="images/image12.jpg" alt="Ảnh 12">
-            <p class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 12</p>
-        </div>
-    
-        <div class="invite">
-            <p>Mời mọi người đến dự tiệc sinh nhật của bé Nai 🎉</p>
-            <p>⏰ Thời gian: 18h00 ngày 20/08/2024</p>
-            <p>📍 Địa điểm: Nhà hàng Hoa Mai, Quận 7, TP.HCM</p>
-        </div>
-    </div>
-    <script src="script.js"></script>
+  <!-- Các ảnh sinh nhật -->
+  <div class="image-block"><img src="images/anh1.jpg" alt="Ảnh 1" /></div>
+  <div class="image-block"><img src="images/anh2.jpg" alt="Ảnh 2" /></div>
+  <div class="image-block"><img src="images/anh3.jpg" alt="Ảnh 3" /></div>
+  <!-- Thêm ảnh khác nếu cần -->
+
+  <div class="info">
+    🎈 Mời mọi người đến dự tiệc sinh nhật của bé Nai!<br />
+    ⏰ Thời gian: 18h00 ngày 20/08/2024<br />
+    📍 Địa điểm: Nhà hàng Hoa Mai, Quận 7, TP.HCM
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

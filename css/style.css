@@ -1,0 +1,41 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+}
+.image-block {
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+.image-block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.image-block img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+.caption {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #333;
+}
+.invite {
+    text-align: center;
+    font-size: 22px;
+    margin: 60px 0;
+    color: #d63384;
+}

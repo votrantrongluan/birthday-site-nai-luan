@@ -6,108 +6,14 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Chúc Mừng Sinh Nhật Bé Nai!</title>
     <!-- Tải Tailwind CSS để tạo kiểu dáng đẹp và responsive -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
     <!-- Tải các phông chữ từ Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Allura&amp;family=Playlist+Script&amp;display=swap" rel="stylesheet"/>
-    <style>
-        /* Tùy chỉnh font chữ cho toàn bộ trang */
-        body {
-            font-family: 'Playlist Script', cursive; /* Phông chữ mặc định cho nội dung */
-            overflow-x: hidden; /* Ngăn chặn cuộn ngang do bong bóng */
-        }
-        /* Phông chữ đặc biệt cho tiêu đề chính (H1) */
-        .font-great-vibes {
-            font-family: 'Great Vibes', cursive;
-        }
-        /* Phông chữ cho tiêu đề nhỏ (H2 và ngày sinh), giống "Olivia Wilsone" */
-        .font-allura {
-            font-family: 'Allura', cursive;
-            /* Thêm đổ bóng trắng để tạo hiệu ứng nổi bật hơn */
-            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); /* Đổ bóng trắng, độ trong suốt 70% */
-        }
-        /* Hiệu ứng cuộn mượt mà */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Tùy chỉnh thanh cuộn cho đẹp mắt hơn (chỉ hoạt động trên một số trình duyệt) */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #F2BDCB; /* Màu hồng nhạt từ bảng màu mới */
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #D98B99; /* Màu hồng đậm hơn từ bảng màu mới */
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #8AA6BF; /* Màu xanh dương nhạt hơn khi hover */
-        }
-
-
-        /* CSS cho hiệu ứng bong bóng */
-        .bubbles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none; /* Cho phép click xuyên qua bong bóng */
-            z-index: 10; /* Đảm bảo bong bóng nằm trên nội dung chính */
-        }
-
-
-        .bubble {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.6); /* Màu trắng trong suốt */
-            border-radius: 50%;
-            opacity: 0;
-            animation: bubble-float 10s ease-in forwards; /* Thời gian animation */
-            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Hiệu ứng phát sáng nhẹ */
-        }
-
-
-        @keyframes bubble-float {
-            0% {
-                transform: translateY(0) translateX(0) scale(0.5);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100vh) translateX(var(--bubble-drift)) scale(1.2);
-                opacity: 0;
-            }
-        }
-
-
-        /* CSS cho hiệu ứng cuộn hiện hình (chỉ áp dụng cho các khối văn bản/tiêu đề) */
-        .scroll-reveal-text {
-            opacity: 0;
-            transform: translateY(50px); /* Bắt đầu từ dưới lên */
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-
-
-        .scroll-reveal-text.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-
-        /* CSS cho chú thích ảnh/video để làm chữ đậm hơn */
-        .image-caption-text {
-            /* Tăng cường đổ bóng để làm chữ trông dày hơn */
-            text-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.5); /* Giữ đổ bóng đen cho chú thích ảnh */
-            font-weight: 700; /* Thử áp dụng font-weight, mặc dù script font có thể không hỗ trợ đầy đủ */
-        }
-    </style>
+    
 </head>
 <body class="bg-gradient-to-br from-[#F2BDCB] via-[#F2C4B3] to-[#79C7D9] text-gray-800">
     <!-- Container cho hiệu ứng bong bóng -->
-    <div class="bubbles"></div>
+    
 
 
     <!-- Phần Header - Tiêu đề và lời chào mừng -->
@@ -126,7 +32,7 @@
 
 
     <!-- Phần Giới thiệu và lời chúc -->
-    <section class="container mx-auto px-4 py-12 md:py-16 relative z-0 scroll-reveal-text">
+    <section class="container mx-auto px-4 py-12 md:py-16 relative z-0">
         <div class="bg-white rounded-3xl shadow-xl p-6 md:p-10 max-w-3xl mx-auto text-center border-4 border-[#F2C4B3]">
             <h2 class="text-3xl md:text-4xl font-allura text-[#D98B99] mb-6">
                 Thiên thần nhỏ của bố mẹ!
@@ -146,54 +52,54 @@
 
     <!-- Phần Thư viện ảnh - Hiển thị các hình ảnh của bé -->
     <section class="container mx-auto px-4 py-8 md:py-12 relative z-0">
-        <h2 class="text-3xl md:text-4xl font-allura text-[#D98B99] mb-8 md:mb-12 scroll-reveal-text">
+        <h2 class="text-3xl md:text-4xl font-allura text-[#D98B99] mb-8 md:mb-12">
             Những Khoảnh Khắc Đáng Yêu Của Nai
         </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <!-- HÌNH ẢNH 1: Bé Nai ngủ say. Thay thế đường dẫn src! -->
-            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105   f l e x   f l e x - c o l   j u s t i f y - b e t w e e n   h - f u l l">
+            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden duration-300">
                 <img alt="Bé Nai ngủ say" class="w-full h-64 object-cover" src="https://placehold.co/600x400/F2C4B3/8AA6BF?text=Be+Nai+Ngu+Say"/>
                 <div class="p-4 text-center">
                     <p class="text-lg text-gray-700 image-caption-text">Bé Nai ngủ say</p>
                 </div>
             </div>
             <!-- HÌNH ẢNH 2: Bé Nai đội mũ. Thay thế đường dẫn src! -->
-            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105   f l e x   f l e x - c o l   j u s t i f y - b e t w e e n   h - f u l l">
+            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden duration-300">
                 <img alt="Bé Nai đội mũ" class="w-full h-64 object-cover" src="https://placehold.co/600x400/F2C4B3/8AA6BF?text=Be+Nai+Doi+Mu"/>
                 <div class="p-4 text-center">
                     <p class="text-lg text-gray-700 image-caption-text">Bé Nai đội mũ</p>
                 </div>
             </div>
             <!-- HÌNH ẢNH 3: Bé Nai ngậm ti. Thay thế đường dẫn src! -->
-            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105   f l e x   f l e x - c o l   j u s t i f y - b e t w e e n   h - f u l l">
+            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden duration-300">
                 <img alt="Bé Nai ngậm ti" class="w-full h-64 object-cover" src="https://placehold.co/600x400/F2C4B3/8AA6BF?text=Be+Nai+Ngam+Ti"/>
                 <div class="p-4 text-center">
                     <p class="text-lg text-gray-700 image-caption-text">Bé Nai ngậm ti</p>
                 </div>
             </div>
             <!-- HÌNH ẢNH 4: Giấc mơ hồng. Thay thế đường dẫn src! -->
-            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105   f l e x   f l e x - c o l   j u s t i f y - b e t w e e n   h - f u l l">
+            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden duration-300">
                 <img alt="Giấc mơ hồng" class="w-full h-64 object-cover" src="https://placehold.co/600x400/F2C4B3/8AA6BF?text=Giac+Mo+Hong"/>
                 <div class="p-4 text-center">
                     <p class="text-lg text-gray-700 image-caption-text">Giấc mơ hồng</p>
                 </div>
             </div>
             <!-- HÌNH ẢNH 5: Nụ hôn của mẹ. Thay thế đường dẫn src! -->
-            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105   f l e x   f l e x - c o l   j u s t i f y - b e t w e e n   h - f u l l">
+            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden duration-300">
                 <img alt="Nụ hôn của mẹ" class="w-full h-64 object-cover" src="https://placehold.co/600x400/F2C4B3/8AA6BF?text=Nu+Hon+Cua+Me"/>
                 <div class="p-4 text-center">
                     <p class="text-lg text-gray-700 image-caption-text">Nụ hôn của mẹ</p>
                 </div>
             </div>
             <!-- HÌNH ẢNH 6: Bé con của mẹ. Thay thế đường dẫn src! -->
-            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105   f l e x   f l e x - c o l   j u s t i f y - b e t w e e n   h - f u l l">
+            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden duration-300">
                 <img alt="Bé con của mẹ" class="w-full h-64 object-cover" src="https://placehold.co/600x400/F2C4B3/8AA6BF?text=Be+Con+Cua+Me"/>
                 <div class="p-4 text-center">
                     <p class="text-lg text-gray-700 image-caption-text">Bé con của mẹ</p>
                 </div>
             </div>
             <!-- HÌNH ẢNH 7: Chào buổi sáng. Thay thế đường dẫn src! -->
-            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105   f l e x   f l e x - c o l   j u s t i f y - b e t w e e n   h - f u l l">
+            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden duration-300">
                 <img alt="Chào buổi sáng" class="w-full h-64 object-cover" src="https://placehold.co/600x400/F2C4B3/8AA6BF?text=Chao+Buoi+Sang"/>
                 <div class="p-4 text-center">
                     <p class="text-lg text-gray-700 image-caption-text">Chào buổi sáng</p>
@@ -205,7 +111,7 @@
 
     <!-- Phần Video kỷ niệm -->
     <section class="container mx-auto px-4 py-8 md:py-12 relative z-0">
-        <h2 class="text-3xl md:text-4xl font-allura text-[#D98B99] mb-8 md:mb-12 scroll-reveal-text">
+        <h2 class="text-3xl md:text-4xl font-allura text-[#D98B99] mb-8 md:mb-12">
             Video Kỷ Niệm Đáng Yêu
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -232,7 +138,7 @@
 
 
     <!-- Phần Chân trang - Lời kết -->
-    <footer class="bg-[#F2C4B3] text-[#8AA6BF] py-8 mt-12 rounded-t-3xl shadow-inner relative z-0 scroll-reveal-text">
+    <footer class="bg-[#F2C4B3] text-[#8AA6BF] py-8 mt-12 rounded-t-3xl shadow-inner relative z-0">
         <div class="container mx-auto px-4 text-center">
             <p class="text-xl md:text-2xl font-semibold mb-4">
                 Gia đình yêu con rất nhiều, bé Nai!
@@ -244,74 +150,6 @@
     </footer>
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Hiệu ứng bong bóng
-            const bubblesContainer = document.querySelector('.bubbles');
-
-
-            function createBubble() {
-                const bubble = document.createElement('div');
-                bubble.classList.add('bubble');
-
-
-                const size = Math.random() * 40 + 20; // Kích thước từ 20px đến 60px
-                bubble.style.width = `${size}px`;
-                bubble.style.height = `${size}px`;
-
-
-                const startLeft = Math.random() * 100; // Vị trí ngang ngẫu nhiên từ 0% đến 100%
-                bubble.style.left = `${startLeft}vw`;
-
-
-                const animationDuration = Math.random() * 8 + 7; // Thời gian animation từ 7s đến 15s
-                bubble.style.animationDuration = `${animationDuration}s`;
-
-
-                // Tạo sự trôi dạt ngang ngẫu nhiên
-                const drift = (Math.random() - 0.5) * 50; // Trôi dạt từ -25vw đến 25vw
-                bubble.style.setProperty('--bubble-drift', `${drift}vw`);
-
-
-                bubblesContainer.appendChild(bubble);
-
-
-                // Xóa bong bóng sau khi animation kết thúc để tránh quá tải DOM
-                bubble.addEventListener('animationend', () => {
-                    bubble.remove();
-                });
-            }
-
-
-            // Tạo bong bóng liên tục
-            setInterval(createBubble, 500); // Tạo một bong bóng mỗi 0.5 giây
-
-
-            // Hiệu ứng cuộn hiện hình (Scroll Reveal) cho các khối văn bản/tiêu đề
-            const scrollRevealTextElements = document.querySelectorAll('.scroll-reveal-text'); // Chỉ chọn các phần tử có class này
-
-
-            const observerOptions = {
-                root: null, // viewport
-                rootMargin: '0px',
-                threshold: 0.1 // Khi 10% của phần tử hiển thị trong viewport
-            };
-
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target); // Ngừng quan sát sau khi đã hiện
-                    }
-                });
-            }, observerOptions);
-
-
-            scrollRevealTextElements.forEach(element => {
-                observer.observe(element);
-            });
-        });
-    </script>
+    
 </body>
 </html>

@@ -1,183 +1,318 @@
-code tôi hien tai ne <!DOCTYPE html>
 
-<html><head><meta charset="utf-8"/><title>Chúc mừng sinh nhật bé Nai</title><style>
-body {
-    font-family: 'Arial', sans-serif;
-    background: #fff;
-    margin: 0;
-    padding: 0;
-}
-.container {
-    width: 90%;
-    margin: auto;
-    padding-top: 20px;
-}
-.image-block {
-    margin-bottom: 50px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out;
-}
-.image-block.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-.image-block img {
-    width: 100%;
-    max-width: 600px;
-    display: block;
-    margin: auto;
-    border-radius: 10px;
-}
-.caption {
-    text-align: center;
-    font-size: 20px;
-    margin-top: 10px;
-    color: #333;
-}
-.invite {
-    text-align: center;
-    font-size: 22px;
-    margin: 60px 0;
-    color: #d63384;
-}
-</style><style>
-.bubble {
-  position: fixed;
-  bottom: -50px;
-  width: 30px;
-  height: 30px;
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 50%;
-  animation: rise 10s linear infinite;
-  z-index: 9999;
-}
-@keyframes rise {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100vh) scale(0.5);
-    opacity: 0;
-  }
-}
-</style></head><body style="background: linear-gradient(to right, #fceabb, #f8b500); padding: 20px; font-family: 'Arial', sans-serif;"><div class="container"><div class="image-block"><img alt="Chúc mừng sinh nhật bé Nai! Ảnh 1" src="images/placeholder.png"/><div class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 1</div></div><div class="image-block"><img alt="Chúc mừng sinh nhật bé Nai! Ảnh 2" src="images/placeholder.png"/><div class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 2</div></div><div class="image-block"><img alt="Chúc mừng sinh nhật bé Nai! Ảnh 3" src="images/image1.jpeg"/><div class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 3</div></div><div class="image-block"><img alt="Chúc mừng sinh nhật bé Nai! Ảnh 4" src="images/placeholder.jpg"/><div class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 4</div></div><div class="image-block"><img alt="Chúc mừng sinh nhật bé Nai! Ảnh 5" src="images/placeholder.jpg"/><div class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 5</div></div><div class="image-block"><img alt="Chúc mừng sinh nhật bé Nai! Ảnh 6" src="images/placeholder.jpg"/><div class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 6</div></div><div class="image-block"><img alt="Chúc mừng sinh nhật bé Nai! Ảnh 7" src="images/placeholder.jpg"/><div class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 7</div></div><div class="image-block"><img alt="Chúc mừng sinh nhật bé Nai! Ảnh 8" src="images/placeholder.jpg"/><div class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 8</div></div><div class="image-block"><img alt="Chúc mừng sinh nhật bé Nai! Ảnh 9" src="images/placeholder.jpg"/><div class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 9</div></div><div class="image-block"><img alt="Chúc mừng sinh nhật bé Nai! Ảnh 10" src="images/placeholder.jpg"/><div class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 10</div></div><div class="image-block"><img alt="Chúc mừng sinh nhật bé Nai! Ảnh 11" src="images/placeholder.jpg"/><div class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 11</div></div><div class="image-block"><img alt="Chúc mừng sinh nhật bé Nai! Ảnh 12" src="images/placeholder.jpg"/><div class="caption">Chúc mừng sinh nhật bé Nai! Ảnh 12</div></div><div class="invite">Mời mọi người đến dự tiệc sinh nhật của bé Nai 🎉</div><div class="invite">⏰ Thời gian: 18h00 ngày 20/08/2024</div><div class="invite">📍 Địa điểm: Nhà hàng Hoa Mai, Quận 7, TP.HCM</div></div><script>
-document.addEventListener("DOMContentLoaded", function () {
-  const blocks = document.querySelectorAll(".image-block");
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  }, { threshold: 0.1 });
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Sinh Nhật Bé Nai!</title>
+    <!-- Tải Tailwind CSS để tạo kiểu dáng đẹp và responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tải các phông chữ từ Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Allura&family=Playlist+Script&display=swap" rel="stylesheet">
+    <style>
+        /* Tùy chỉnh font chữ cho toàn bộ trang */
+        body {
+            font-family: 'Playlist Script', cursive; /* Phông chữ mặc định cho nội dung */
+            overflow-x: hidden; /* Ngăn chặn cuộn ngang do bong bóng */
+        }
+        /* Phông chữ đặc biệt cho tiêu đề chính (H1) */
+        .font-great-vibes {
+            font-family: 'Great Vibes', cursive;
+        }
+        /* Phông chữ cho tiêu đề nhỏ (H2 và ngày sinh), giống "Olivia Wilsone" */
+        .font-allura {
+            font-family: 'Allura', cursive;
+            /* Thêm đổ bóng trắng để tạo hiệu ứng nổi bật hơn */
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); /* Đổ bóng trắng, độ trong suốt 70% */
+        }
+        /* Hiệu ứng cuộn mượt mà */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Tùy chỉnh thanh cuộn cho đẹp mắt hơn (chỉ hoạt động trên một số trình duyệt) */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F2BDCB; /* Màu hồng nhạt từ bảng màu mới */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D98B99; /* Màu hồng đậm hơn từ bảng màu mới */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8AA6BF; /* Màu xanh dương nhạt hơn khi hover */
+        }
 
-  blocks.forEach((block) => {
-    observer.observe(block);
-  });
-});
-</script>
-<!-- Hiệu ứng pháo hoa -->
-<canvas id="fireworksCanvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:999;"></canvas>
-<script>
-const canvas = document.getElementById("fireworksCanvas");
-const ctx = canvas.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
 
-function random(min, max) {
-  return Math.random() * (max - min) + min;
-}
+        /* CSS cho hiệu ứng bong bóng */
+        .bubbles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Cho phép click xuyên qua bong bóng */
+            z-index: 10; /* Đảm bảo bong bóng nằm trên nội dung chính */
+        }
 
-function Firework() {
-  this.x = canvas.width / 2;
-  this.y = canvas.height;
-  this.targetX = random(0, canvas.width);
-  this.targetY = random(0, canvas.height / 2);
-  this.speed = 5;
-  this.angle = Math.atan2(this.targetY - this.y, this.targetX - this.x);
-  this.distance = Math.hypot(this.targetX - this.x, this.targetY - this.y);
-  this.traveled = 0;
-  this.exploded = false;
-  this.particles = [];
-}
 
-Firework.prototype.update = function() {
-  if (!this.exploded) {
-    const vx = Math.cos(this.angle) * this.speed;
-    const vy = Math.sin(this.angle) * this.speed;
-    this.x += vx;
-    this.y += vy;
-    this.traveled += Math.hypot(vx, vy);
-    if (this.traveled >= this.distance) {
-      this.exploded = true;
-      for (let i = 0; i < 100; i++) {
-        this.particles.push(new Particle(this.x, this.y));
-      }
-    }
-  } else {
-    this.particles.forEach(p => p.update());
-    this.particles = this.particles.filter(p => p.alpha > 0);
-  }
-};
+        .bubble {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.6); /* Màu trắng trong suốt */
+            border-radius: 50%;
+            opacity: 0;
+            animation: bubble-float 10s ease-in forwards; /* Thời gian animation */
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Hiệu ứng phát sáng nhẹ */
+        }
 
-Firework.prototype.draw = function() {
-  if (!this.exploded) {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
-    ctx.fillStyle = "white";
-    ctx.fill();
-  } else {
-    this.particles.forEach(p => p.draw());
-  }
-};
 
-function Particle(x, y) {
-  this.x = x;
-  this.y = y;
-  this.angle = random(0, Math.PI * 2);
-  this.speed = random(1, 6);
-  this.alpha = 1;
-  this.gravity = 0.05;
-}
+        @keyframes bubble-float {
+            0% {
+                transform: translateY(0) translateX(0) scale(0.5);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(var(--bubble-drift)) scale(1.2);
+                opacity: 0;
+            }
+        }
 
-Particle.prototype.update = function() {
-  this.x += Math.cos(this.angle) * this.speed;
-  this.y += Math.sin(this.angle) * this.speed + this.gravity;
-  this.alpha -= 0.01;
-};
 
-Particle.prototype.draw = function() {
-  ctx.beginPath();
-  ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
-  ctx.fillStyle = `rgba(255,255,255,${this.alpha})`;
-  ctx.fill();
-};
+        /* CSS cho hiệu ứng cuộn hiện hình (chỉ áp dụng cho các khối văn bản/tiêu đề) */
+        .scroll-reveal-text {
+            opacity: 0;
+            transform: translateY(50px); /* Bắt đầu từ dưới lên */
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
 
-let fireworks = [];
 
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  if (Math.random() < 0.05) {
-    fireworks.push(new Firework());
-  }
-  fireworks.forEach(f => f.update());
-  fireworks.forEach(f => f.draw());
-  fireworks = fireworks.filter(f => !f.exploded || f.particles.length > 0);
-  requestAnimationFrame(animate);
-}
+        .scroll-reveal-text.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-animate();
-</script>
-<script>
-function createBubble() {
-  const bubble = document.createElement("div");
-  bubble.className = "bubble";
-  bubble.style.left = Math.random() * window.innerWidth + "px";
-  bubble.style.width = bubble.style.height = (Math.random() * 20 + 20) + "px";
-  document.body.appendChild(bubble);
-  setTimeout(() => bubble.remove(), 10000);
-}
-setInterval(createBubble, 500);
-</script></body></html>
+
+        /* CSS cho chú thích ảnh/video để làm chữ đậm hơn */
+        .image-caption-text {
+            /* Tăng cường đổ bóng để làm chữ trông dày hơn */
+            text-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.5); /* Giữ đổ bóng đen cho chú thích ảnh */
+            font-weight: 700; /* Thử áp dụng font-weight, mặc dù script font có thể không hỗ trợ đầy đủ */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-[#F2BDCB] via-[#F2C4B3] to-[#79C7D9] text-gray-800">
+    <!-- Container cho hiệu ứng bong bóng -->
+    <div class="bubbles"></div>
+
+
+    <!-- Phần Header - Tiêu đề và lời chào mừng -->
+    <header class="relative w-full h-96 md:h-[500px] flex items-center justify-center overflow-hidden shadow-lg rounded-b-3xl z-0">
+        <!-- HÌNH ẢNH NỀN HEADER: Thay thế đường dẫn dưới đây bằng đường dẫn ảnh của bé Nai sau khi bạn tải lên dịch vụ lưu trữ công cộng -->
+        <img src="https://placehold.co/1200x500/D98B99/732424?text=Anh+Be+Nai+Header" alt="Ảnh bé Nai làm nền"
+             class="absolute inset-0 w-full h-full object-cover filter brightness-75">
+        <div class="relative z-10 text-center p-4 bg-white bg-opacity-70 rounded-xl shadow-2xl backdrop-blur-sm mx-4">
+            <h1 class="text-4xl md:text-6xl font-great-vibes text-[#8AA6BF] drop-shadow-lg mb-2">
+                Chúc Mừng Sinh Nhật Bé Nai!
+            </h1>
+            <p class="text-xl md:text-2xl font-allura text-[#D98B99] font-semibold">
+                13 tháng 11 - Ngày của con!
+            </p>
+        </div>
+    </header>
+
+
+    <!-- Phần Giới thiệu và lời chúc -->
+    <section class="container mx-auto px-4 py-12 md:py-16 relative z-0 scroll-reveal-text">
+        <div class="bg-white rounded-3xl shadow-xl p-6 md:p-10 max-w-3xl mx-auto text-center border-4 border-[#F2C4B3]">
+            <h2 class="text-3xl md:text-4xl font-allura text-[#D98B99] mb-6">
+                Thiên thần nhỏ của bố mẹ!
+            </h2>
+            <p class="text-lg md:text-xl leading-relaxed text-gray-700">
+                Ngày này một năm trước, thế giới của bố mẹ đã thay đổi hoàn toàn khi bé Nai đến bên. Con như một món quà tuyệt vời nhất mà cuộc sống ban tặng, mang đến cho gia đình mình biết bao tiếng cười và hạnh phúc.
+            </p>
+            <p class="text-lg md:text-xl leading-relaxed text-gray-700 mt-4">
+                Nhìn con lớn lên mỗi ngày, từng cử chỉ, từng nụ cười, từng giấc ngủ say sưa đều là những khoảnh khắc quý giá mà bố mẹ mãi khắc ghi. Tình yêu thương của bố mẹ dành cho con là vô tận, và chúng ta sẽ luôn ở đây, đồng hành cùng con trên mọi nẻo đường của cuộc đời.
+            </p>
+            <p class="text-xl md:text-2xl font-semibold text-[#8AA6BF] mt-6">
+                Chúc công chúa nhỏ của bố mẹ luôn khỏe mạnh, ăn ngoan, chóng lớn và mãi là niềm tự hào của cả gia đình. Bố mẹ yêu con nhiều lắm!
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Phần Thư viện ảnh - Hiển thị các hình ảnh của bé -->
+    <section class="container mx-auto px-4 py-8 md:py-12 relative z-0">
+        <h2 class="text-3xl md:text-4xl font-allura text-[#D98B99] mb-8 md:mb-12 scroll-reveal-text">
+            Những Khoảnh Khắc Đáng Yêu Của Nai
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <!-- HÌNH ẢNH 1: Bé Nai ngủ say. Thay thế đường dẫn src! -->
+            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <img src="https://placehold.co/600x400/F2C4B3/8AA6BF?text=Be+Nai+Ngu+Say" alt="Bé Nai ngủ say" class="w-full h-64 object-cover">
+                <div class="p-4 text-center">
+                    <p class="text-lg text-gray-700 image-caption-text">Bé Nai ngủ say</p>
+                </div>
+            </div>
+            <!-- HÌNH ẢNH 2: Bé Nai đội mũ. Thay thế đường dẫn src! -->
+            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <img src="https://placehold.co/600x400/F2C4B3/8AA6BF?text=Be+Nai+Doi+Mu" alt="Bé Nai đội mũ" class="w-full h-64 object-cover">
+                <div class="p-4 text-center">
+                    <p class="text-lg text-gray-700 image-caption-text">Bé Nai đội mũ</p>
+                </div>
+            </div>
+            <!-- HÌNH ẢNH 3: Bé Nai ngậm ti. Thay thế đường dẫn src! -->
+            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <img src="https://placehold.co/600x400/F2C4B3/8AA6BF?text=Be+Nai+Ngam+Ti" alt="Bé Nai ngậm ti" class="w-full h-64 object-cover">
+                <div class="p-4 text-center">
+                    <p class="text-lg text-gray-700 image-caption-text">Bé Nai ngậm ti</p>
+                </div>
+            </div>
+            <!-- HÌNH ẢNH 4: Giấc mơ hồng. Thay thế đường dẫn src! -->
+            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <img src="https://placehold.co/600x400/F2C4B3/8AA6BF?text=Giac+Mo+Hong" alt="Giấc mơ hồng" class="w-full h-64 object-cover">
+                <div class="p-4 text-center">
+                    <p class="text-lg text-gray-700 image-caption-text">Giấc mơ hồng</p>
+                </div>
+            </div>
+            <!-- HÌNH ẢNH 5: Nụ hôn của mẹ. Thay thế đường dẫn src! -->
+            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <img src="https://placehold.co/600x400/F2C4B3/8AA6BF?text=Nu+Hon+Cua+Me" alt="Nụ hôn của mẹ" class="w-full h-64 object-cover">
+                <div class="p-4 text-center">
+                    <p class="text-lg text-gray-700 image-caption-text">Nụ hôn của mẹ</p>
+                </div>
+            </div>
+            <!-- HÌNH ẢNH 6: Bé con của mẹ. Thay thế đường dẫn src! -->
+            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <img src="https://placehold.co/600x400/F2C4B3/8AA6BF?text=Be+Con+Cua+Me" alt="Bé con của mẹ" class="w-full h-64 object-cover">
+                <div class="p-4 text-center">
+                    <p class="text-lg text-gray-700 image-caption-text">Bé con của mẹ</p>
+                </div>
+            </div>
+            <!-- HÌNH ẢNH 7: Chào buổi sáng. Thay thế đường dẫn src! -->
+            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <img src="https://placehold.co/600x400/F2C4B3/8AA6BF?text=Chao+Buoi+Sang" alt="Chào buổi sáng" class="w-full h-64 object-cover">
+                <div class="p-4 text-center">
+                    <p class="text-lg text-gray-700 image-caption-text">Chào buổi sáng</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Phần Video kỷ niệm -->
+    <section class="container mx-auto px-4 py-8 md:py-12 relative z-0">
+        <h2 class="text-3xl md:text-4xl font-allura text-[#D98B99] mb-8 md:mb-12 scroll-reveal-text">
+            Video Kỷ Niệm Đáng Yêu
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <!-- VIDEO 1: Thay thế toàn bộ thẻ div này bằng thẻ <video> hoặc <iframe> có đường dẫn video của bạn -->
+            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden p-4">
+                <div class="w-full h-64 bg-gray-200 flex items-center justify-center rounded-lg shadow-md text-gray-500">
+                    <p class="text-center text-lg text-gray-700 image-caption-text">Khung video 1<br>Tải video lên YouTube/Vimeo và thay thế tại đây</p>
+                </div>
+                <p class="text-center text-lg text-gray-700 image-caption-text">
+                    Khoảnh khắc đáng yêu của Nai
+                </p>
+            </div>
+            <!-- VIDEO 2: Thay thế toàn bộ thẻ div này bằng thẻ <video> hoặc <iframe> có đường dẫn video của bạn -->
+            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden p-4">
+                <div class="w-full h-64 bg-gray-200 flex items-center justify-center rounded-lg shadow-md text-gray-500">
+                    <p class="text-center text-lg text-gray-700 image-caption-text">Khung video 2<br>Tải video lên YouTube/Vimeo và thay thế tại đây</p>
+                </div>
+                <p class="text-center text-lg text-gray-700 image-caption-text">
+                    Bé Nai khám phá thế giới
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Phần Chân trang - Lời kết -->
+    <footer class="bg-[#F2C4B3] text-[#8AA6BF] py-8 mt-12 rounded-t-3xl shadow-inner relative z-0 scroll-reveal-text">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-xl md:text-2xl font-semibold mb-4">
+                Gia đình yêu con rất nhiều, bé Nai!
+            </p>
+            <p class="text-md md:text-lg">
+                Cảm ơn bạn đã ghé thăm và cùng chia sẻ niềm vui này với gia đình chúng tôi.
+            </p>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hiệu ứng bong bóng
+            const bubblesContainer = document.querySelector('.bubbles');
+
+
+            function createBubble() {
+                const bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+
+
+                const size = Math.random() * 40 + 20; // Kích thước từ 20px đến 60px
+                bubble.style.width = `${size}px`;
+                bubble.style.height = `${size}px`;
+
+
+                const startLeft = Math.random() * 100; // Vị trí ngang ngẫu nhiên từ 0% đến 100%
+                bubble.style.left = `${startLeft}vw`;
+
+
+                const animationDuration = Math.random() * 8 + 7; // Thời gian animation từ 7s đến 15s
+                bubble.style.animationDuration = `${animationDuration}s`;
+
+
+                // Tạo sự trôi dạt ngang ngẫu nhiên
+                const drift = (Math.random() - 0.5) * 50; // Trôi dạt từ -25vw đến 25vw
+                bubble.style.setProperty('--bubble-drift', `${drift}vw`);
+
+
+                bubblesContainer.appendChild(bubble);
+
+
+                // Xóa bong bóng sau khi animation kết thúc để tránh quá tải DOM
+                bubble.addEventListener('animationend', () => {
+                    bubble.remove();
+                });
+            }
+
+
+            // Tạo bong bóng liên tục
+            setInterval(createBubble, 500); // Tạo một bong bóng mỗi 0.5 giây
+
+
+            // Hiệu ứng cuộn hiện hình (Scroll Reveal) cho các khối văn bản/tiêu đề
+            const scrollRevealTextElements = document.querySelectorAll('.scroll-reveal-text'); // Chỉ chọn các phần tử có class này
+
+
+            const observerOptions = {
+                root: null, // viewport
+                rootMargin: '0px',
+                threshold: 0.1 // Khi 10% của phần tử hiển thị trong viewport
+            };
+
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Ngừng quan sát sau khi đã hiện
+                    }
+                });
+            }, observerOptions);
+
+
+            scrollRevealTextElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
